@@ -20,4 +20,4 @@ Given that **auth** is optional with this repo but you can get it by pulling it 
 
 or just pull it into your main branch like so:
 
-`git pull origin auth`
+`git merge auth`
