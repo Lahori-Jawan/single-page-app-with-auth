@@ -33,11 +33,11 @@ export default new Vuex.Store({
     async Signup({ commit, state }, credentials) {
       console.log({credentials})
       try {
-        const { status, data: { message, data: user } } = await axios.post('/api/auth/signup', { ...credentials });
+        const { message, user } = (await axios.post('/api/auth/signup', { ...credentials })).data;
         console.log({user})
         commit('SET_USER', user);
         commit('SET_NOTIFICATION', message);
-        TokenService.setToken(user.token);
+        TokenService.setToken(user.accessToken);
       } catch (error) {
         console.log('error', error);
       }
@@ -45,10 +45,10 @@ export default new Vuex.Store({
 
     async Login({ commit, state }, credentials) {
       try {
-        const { status, data: { message, user } } = await axios.post('/api/auth/login', { ...credentials });
+        const { message, user } = (await axios.post('/api/auth/signin', { ...credentials })).data;
         commit('SET_USER', user);
         commit('SET_NOTIFICATION', message);
-        TokenService.setToken(user.token);
+        TokenService.setToken(user.accessToken);
       } catch (error) {
         console.log('error', error);
       }
