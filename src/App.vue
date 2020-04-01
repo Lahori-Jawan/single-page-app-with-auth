@@ -9,7 +9,7 @@
       <router-link to="/">Home</router-link> &nbsp;
       <router-link to="/auth/login">Login</router-link> &nbsp;
       <router-link to="/auth/register">Register</router-link> &nbsp;
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About (Protected)</router-link>
     </nav>
     <router-view></router-view>
   </div>
