@@ -1,4 +1,5 @@
 
+## Usage
 ``` bash
 # install dependencies
 $ yarn install
@@ -11,12 +12,12 @@ $ yarn build
 
 ```
 
-### Auth Management
-Given that **auth** is optional with this repo but you can get it by pulling it from branch `auth` with following commands:
+## Auth Management
+Given that **auth** is optional with this repo, you can still get it by pulling it from branch `auth` with following commands:
 
 `git checkout -b auth`
 
-`git pull`
+`git pull origin auth`
 
 or just pull it into your main branch like so:
 
