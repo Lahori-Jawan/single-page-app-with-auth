@@ -1,8 +1,7 @@
 <template>
   <div class="about page">
     <h2>
-      This is
-      <code>about</code> page
+      I am <code>Protected</code> by Law of <code>router</code> 😅
     </h2>
   </div>
 </template>
